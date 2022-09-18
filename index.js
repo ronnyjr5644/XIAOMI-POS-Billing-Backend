@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 // Connect to MongoDB
 mongoose
-  .connect(process.env.DB_CONNECTION, {
+  .connect(process.env.DB_CONNECTION || "mongodb+srv://phioxing:lo5FhxMwfXih26zb@cluster0.l4krhnc.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
